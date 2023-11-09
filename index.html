@@ -7,8 +7,9 @@
     <meta name="author" content="Ricardo Figueiredo" />
     <title>Flagle Enhanced</title>
 
-    <link rel="icon" href="assets/red-flag.png" type="image/x-icon" />
+    <link rel="icon" href="assets/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+
     <script src="script.js"></script>
   </head>
 
@@ -22,14 +23,14 @@
     <div id="body-content">
       <div class="flag-container">
         <div class="flag-row">
-          <div class="flag-section"></div>
-          <div class="flag-section"></div>
-          <div class="flag-section"></div>
+          <div id="flag-section-1"></div>
+          <div id="flag-section-2"></div>
+          <div id="flag-section-3"></div>
         </div>
         <div class="flag-row">
-          <div class="flag-section"></div>
-          <div class="flag-section"></div>
-          <div class="flag-section"></div>
+          <div id="flag-section-4"></div>
+          <div id="flag-section-5"></div>
+          <div id="flag-section-6"></div>
         </div>
       </div>
 
@@ -45,6 +46,7 @@
 
     <script>
       autocomplete(document.getElementById("search"), countries);
+      newFlag();
     </script>
   </body>
 </html>

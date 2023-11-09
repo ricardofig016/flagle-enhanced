@@ -239,6 +239,65 @@ const countries = [
   "Zimbabwe",
 ];
 
+const flagFiles = [
+  "Flag_of_Afghanistan-512x341.png",
+  //"Flag_of_Albania-512x366.png",
+  //"Flag_of_Algeria-512x341.png",
+  //"Flag_of_Andorra-512x358.png",
+  //"Flag_of_Angola-512x341.png",
+  "Flag_of_Nepal-512x624.png",
+];
+
+var currFlagPath;
+var guesses = 0;
+
+function newFlag() {
+  // Get random flag file
+  currFlagPath =
+    "assets/flags/" + flagFiles[Math.floor(Math.random() * flagFiles.length)];
+
+  // Create an image object
+  var tempImage = new Image();
+
+  // Set the source of the temporary image to the random flag image
+  tempImage.src = currFlagPath;
+
+  // When the temporary image is loaded, get its width and height
+  tempImage.onload = function () {
+    var flagWidth = 300;
+    var flagHeight = (tempImage.height * 300) / tempImage.width;
+
+    // Set height, background-position and background-size
+    var flagSections = document.querySelectorAll(".flag-row div");
+    flagSections.forEach(function (section, index) {
+      section.style.height = flagHeight / 2 + "px";
+      section.style.backgroundImage = "";
+      section.style.backgroundSize = flagWidth + "px " + flagHeight + "px";
+
+      var posX = (index % 3) * -100;
+      var posY = Math.floor(index / 3) * -(flagHeight / 2);
+      section.style.backgroundPosition = posX + "px " + posY + "px";
+    });
+  };
+}
+
+function showRandomSection() {
+  // Show random section
+  guesses++;
+  var flagSections = document.querySelectorAll(".flag-row div");
+  var randomSection = flagSections[Math.floor(Math.random() * 6)];
+  while (randomSection.style.backgroundImage) {
+    randomSection = flagSections[Math.floor(Math.random() * 6)];
+  }
+  randomSection.style.backgroundImage = 'url("' + currFlagPath + '")';
+
+  // Check if game is lost
+  if (guesses >= 6) {
+    guesses = 0;
+    newFlag();
+  }
+}
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
@@ -351,3 +410,9 @@ function autocomplete(inp, arr) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("search")
+    .addEventListener("change", showRandomSection);
+});
