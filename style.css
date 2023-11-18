@@ -67,6 +67,10 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+#body-title {
+  color: var(--white);
+}
+
 /* Flag */
 
 .flag-container {
@@ -117,4 +121,10 @@ body {
 
 .search-container #searchautocomplete-list div {
   padding: 5px;
+}
+
+.search-container .autocomplete-active,
+.search-container #searchautocomplete-list div:hover {
+  background-color: var(--light_blue);
+  font-weight: bold;
 }
