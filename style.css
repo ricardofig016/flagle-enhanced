@@ -92,7 +92,7 @@ body {
 
 /* Search */
 
-.search-container {
+#search-container {
   position: relative;
   margin: 0;
   padding: 30px 0;
@@ -100,7 +100,8 @@ body {
   display: block;
 }
 
-.search-container input {
+#search-container input {
+  font-family: "Montserrat", sans-serif;
   width: 278px;
   border: 1px solid var(--dark_gray);
   border-radius: 5px;
@@ -109,7 +110,7 @@ body {
   font-size: 16px;
 }
 
-.search-container #searchautocomplete-list {
+#search-container #searchautocomplete-list {
   position: absolute;
   width: 298px;
   padding-top: 3px;
@@ -119,12 +120,31 @@ body {
   z-index: 11;
 }
 
-.search-container #searchautocomplete-list div {
+#search-container #searchautocomplete-list div {
   padding: 5px;
 }
 
-.search-container .autocomplete-active,
-.search-container #searchautocomplete-list div:hover {
+#search-container .autocomplete-active,
+#search-container #searchautocomplete-list div:hover {
   background-color: var(--light_blue);
   font-weight: bold;
+}
+
+#end-game {
+  position: relative;
+  margin: 0;
+  padding: 30px 0;
+  width: 300px;
+  display: block;
+}
+
+#end-game button {
+  font-family: "Montserrat", sans-serif;
+  color: var(--black);
+  width: 300px;
+  border: 1px solid var(--dark_gray);
+  border-radius: 5px;
+  background-color: var(--white);
+  padding: 10px;
+  font-size: 16px;
 }

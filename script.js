@@ -254,6 +254,16 @@ function newFlag() {
   if (countriesShuffled.length === 0) {
     shuffleCountries();
   }
+
+  // Change title
+  document.getElementById("body-title").querySelector("h2").textContent =
+    "Where is this flag from?";
+
+  // Hide end-game, show search-container and focus input
+  document.getElementById("end-game").style.display = "none";
+  document.getElementById("search-container").style.display = "block";
+  document.getElementById("search").focus();
+
   // Get random flag file
   currCountry = countriesShuffled.shift();
 
@@ -285,14 +295,13 @@ function newFlag() {
 function handleSearchSubmit(inputText) {
   if (inputText.toUpperCase() === currCountry[0].toUpperCase()) {
     // Answer found
-
-    handleWin();
+    handleEndGame(true);
   } else {
     // Wrong answer
     showRandomSection();
     // Check if game is lost
     if (guesses >= 6) {
-      handleLoss();
+      handleEndGame(false);
     }
   }
   document.getElementById("search").value = "";
@@ -316,20 +325,32 @@ function showAllSections() {
   });
 }
 
-function handleLoss() {
-  guesses = 0;
-}
+function handleEndGame(isWin) {
+  // Hide search-container and show end-game
+  var endGameDiv = document.getElementById("end-game");
+  document.getElementById("search-container").style.display = "none";
+  endGameDiv.style.display = "block";
+  endGameDiv.querySelector("button").focus();
 
-function handleWin() {
+  // Focus end-game button
+
   showAllSections();
   guesses = 0;
+
+  var title = document.getElementById("body-title").querySelector("h2");
+  if (isWin) {
+    title.textContent = "Correct! The answer is " + currCountry[0];
+  } else {
+    title.textContent = "Wrong... The answer is " + currCountry[0];
+  }
 }
 
-function autocomplete(inp) {
+function autocomplete() {
   /*the autocomplete function takes two arguments,
-    the text field element and an array of possible autocompleted values:*/
+  the text field element and an array of possible autocompleted values:*/
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
+  var inp = document.getElementById("search");
   inp.addEventListener("input", handleInputChange);
   inp.addEventListener("click", handleInputChange);
   function handleInputChange(e) {
@@ -443,4 +464,17 @@ function autocomplete(inp) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {});
+document.addEventListener("DOMContentLoaded", function () {
+  // Listeners for end-game button
+  var endGameButton = document
+    .getElementById("end-game")
+    .querySelector("button");
+
+  endGameButton.addEventListener("mousedown", newFlag);
+
+  endGameButton.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      newFlag();
+    }
+  });
+});

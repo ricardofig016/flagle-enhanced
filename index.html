@@ -23,8 +23,6 @@
     <div id="body-content">
       <div id="body-title">
         <h2>Where is this flag from?</h2>
-        <h2>Wrong... The answer is United States of America</h2>
-        <h2>Correct! The answer is United States of America</h2>
       </div>
 
       <div class="flag-container">
@@ -40,7 +38,7 @@
         </div>
       </div>
 
-      <div class="search-container">
+      <div id="search-container">
         <input
           id="search"
           type="text"
@@ -48,10 +46,16 @@
           placeholder="Guess the Country"
         />
       </div>
+
+      <div id="end-game">
+        <button>Next Flag</button>
+      </div>
+
+      <div id="stats-container"></div>
     </div>
 
     <script>
-      autocomplete(document.getElementById("search"));
+      autocomplete();
       newFlag();
     </script>
   </body>
