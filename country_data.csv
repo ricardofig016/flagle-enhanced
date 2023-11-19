@@ -11,35 +11,35 @@ Antigua and Barbuda,assets/flags/Flag_of_Antigua_and_Barbuda-512x341.png
 Argentina,assets/flags/Flag_of_Argentina-512x320.png
 Armenia,assets/flags/Flag_of_Armenia-512x256.png
 Aruba,
-Australia,
-Austria,
-Azerbaijan,
-Bahamas,
-Bahrain,
-Bangladesh,
-Barbados,
-Belarus,
-Belgium,
-Belize,
-Benin,
+Australia,assets/flags/Flag_of_Australia-512x256.png
+Austria,assets/flags/Flag_of_Australia-512x256.png
+Azerbaijan,assets/flags/Flag_of_Azerbaijan-512x256.png
+Bahamas,assets/flags/Flag_of_Bahamas-512x256.png
+Bahrain,assets/flags/Flag_of_Bahrain-512x307.png
+Bangladesh,assets/flags/Flag_of_Bangladesh-512x307.png
+Barbados,assets/flags/Flag_of_Barbados-512x341.png
+Belarus,assets/flags/Flag_of_Belarus-512x256.png
+Belgium,assets/flags/Flag_of_Belgium-512x445.png
+Belize,assets/flags/Flag_of_Belize-512x307.png
+Benin,assets/flags/Flag_of_Benin-512x341.png
 Bermuda,
-Bhutan,
-Bolivia,
-Bosnia and Herzegovina,
-Botswana,
-Brazil,
+Bhutan,assets/flags/Flag_of_Bhutan-512x341.png
+Bolivia,assets/flags/Flag_of_Bolivia-512x348.png
+Bosnia and Herzegovina,assets/flags/Flag_of_Bosnia_and_Herzegovina-512x256.png
+Botswana,assets/flags/Flag_of_Botswana-512x341.png
+Brazil,assets/flags/Flag_of_Brazil-512x358.png
 British Indian Ocean Territory,
-Brunei,
-Bulgaria,
-Burkina Faso,
-Burundi,
-Cambodia,
-Cameroon,
-Canada,
-Cape Verde,
+Brunei,assets/flags/Flag_of_Brunei-512x256.png
+Bulgaria,assets/flags/Flag_of_Bulgaria-512x307.png
+Burkina Faso,assets/flags/Flag_of_Burkina_Faso-512x341.png
+Burundi,assets/flags/Flag_of_Burundi-512x307.png
+Cambodia,assets/flags/Flag_of_Cambodia-512x328.png
+Cameroon,assets/flags/Flag_of_Cameroon-512x341.png
+Canada,assets/flags/Flag_of_Canada-512x256.png
+Cape Verde,assets/flags/Flag_of_Cape_Verde-512x301.png
 Cayman Islands,
-Central African Republic,
-Chad,
+Central African Republic,assets/flags/Flag_of_Central_African_Republic-512x341.png
+Chad,assets/flags/Flag_of_Chad-512x341.png
 Chile,
 China,
 Christmas Island,
@@ -174,10 +174,11 @@ Poland,
 Portugal,
 Puerto Rico,
 Qatar,
+Republic of Artsakh,assets/flags/Flag_of_Artsakh-512x256.png
+Reunion,
 Romania,
 Russia,
 Rwanda,
-Reunion,
 Saint Helena,
 Saint Kitts and Nevis,
 Saint Lucia,
