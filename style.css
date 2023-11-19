@@ -68,7 +68,11 @@ body {
 }
 
 #body-title {
+  height: 70px;
   color: var(--white);
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
 }
 
 /* Flag */
