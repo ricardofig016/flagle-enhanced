@@ -1,248 +1,38 @@
-const countries = [
-  ["Afghanistan", "assets/flags/Flag_of_Afghanistan-512x341.png"],
-  ["Albania", "assets/flags/Flag_of_Albania-512x366.png"],
-  ["Algeria", "assets/flags/Flag_of_Algeria-512x341.png"],
-  //["American Samoa","",],
-  ["Andorra", "assets/flags/Flag_of_Andorra-512x358.png"],
-  ["Angola", "assets/flags/Flag_of_Angola-512x341.png"],
-  //["Anguilla","",],
-  ["Antarctica", "assets/flags/Flag_of_Antarctica-512x341.png"],
-  //["Antigua and Barbuda","",],
-  //["Argentina","",],
-  //["Armenia","",],
-  //["Aruba","",],
-  //["Australia","",],
-  //["Austria","",],
-  //["Azerbaijan","",],
-  //["Bahamas","",],
-  //["Bahrain","",],
-  //["Bangladesh","",],
-  //["Barbados","",],
-  //["Belarus","",],
-  //["Belgium","",],
-  //["Belize","",],
-  //["Benin","",],
-  //["Bermuda","",],
-  //["Bhutan","",],
-  //["Bolivia","",],
-  //["Bosnia and Herzegovina","",],
-  //["Botswana","",],
-  //["Brazil","",],
-  //["British Indian Ocean Territory","",],
-  //["Brunei","",],
-  //["Bulgaria","",],
-  //["Burkina Faso","",],
-  //["Burundi","",],
-  //["Cambodia","",],
-  //["Cameroon","",],
-  //["Canada","",],
-  //["Cape Verde","",],
-  //["Cayman Islands","",],
-  //["Central African Republic","",],
-  //["Chad","",],
-  //["Chile","",],
-  //["China","",],
-  //["Christmas Island","",],
-  //["Cocos Islands","",],
-  //["Colombia","",],
-  //["Comoros","",],
-  //["Congo","",],
-  //["Cook Islands","",],
-  //["Costa Rica","",],
-  //["Cote D'ivoire","",],
-  //["Croatia","",],
-  //["Cuba","",],
-  //["Cyprus","",],
-  //["Czechia","",],
-  //["Democratic Republic of the Congo","",],
-  //["Denmark","",],
-  //["Djibouti","",],
-  //["Dominica","",],
-  //["Dominican Republic","",],
-  //["Ecuador","",],
-  //["Egypt","",],
-  //["El Salvador","",],
-  //["Equatorial Guinea","",],
-  //["Eritrea","",],
-  //["Estonia","",],
-  //["Eswatini","",],
-  //["Ethiopia","",],
-  //["Falkland Islands (Malvinas)","",],
-  //["Faroe Islands","",],
-  //["Fiji","",],
-  //["Finland","",],
-  //["France","",],
-  //["French Guiana","",],
-  //["French Polynesia","",],
-  //["French Southern Territories","",],
-  //["Gabon","",],
-  //["Gambia","",],
-  //["Georgia","",],
-  //["Germany","",],
-  //["Ghana","",],
-  //["Gibraltar","",],
-  //["Greece","",],
-  //["Greenland","",],
-  //["Grenada","",],
-  //["Guadeloupe","",],
-  //["Guam","",],
-  //["Guatemala","",],
-  //["Guernsey","",],
-  //["Guinea","",],
-  //["Guinea-Bissau","",],
-  //["Guyana","",],
-  //["Haiti","",],
-  //["Honduras","",],
-  //["Hong Kong","",],
-  //["Hungary","",],
-  //["Iceland","",],
-  //["India","",],
-  //["Indonesia","",],
-  //["Iran","",],
-  //["Iraq","",],
-  //["Ireland","",],
-  //["Isle of Man","",],
-  //["Israel","",],
-  //["Italy","",],
-  //["Jamaica","",],
-  //["Japan","",],
-  //["Jersey","",],
-  //["Jordan","",],
-  //["Kazakhstan","",],
-  //["Kenya","",],
-  //["Kiribati","",],
-  //["Kosovo","",],
-  //["Kuwait","",],
-  //["Kyrgyzstan","",],
-  //["Laos","",],
-  //["Latvia","",],
-  //["Lebanon","",],
-  //["Lesotho","",],
-  //["Liberia","",],
-  //["Libya","",],
-  //["Liechtenstein","",],
-  //["Lithuania","",],
-  //["Luxembourg","",],
-  //["Macau","",],
-  //["Macedonia","",],
-  //["Madagascar","",],
-  //["Malawi","",],
-  //["Malaysia","",],
-  //["Maldives","",],
-  //["Mali","",],
-  //["Malta","",],
-  //["Marshall Islands","",],
-  //["Martinique","",],
-  //["Mauritania","",],
-  //["Mauritius","",],
-  //["Mayotte","",],
-  //["Mexico","",],
-  //["Micronesia","",],
-  //["Moldova","",],
-  //["Monaco","",],
-  //["Mongolia","",],
-  //["Montenegro","",],
-  //["Montserrat","",],
-  //["Morocco","",],
-  //["Mozambique","",],
-  //["Myanmar","",],
-  //["Namibia","",],
-  //["Nauru","",],
-  //["Nepal","",],
-  //["Netherlands","",],
-  //["New Caledonia","",],
-  //["New Zealand","",],
-  //["Nicaragua","",],
-  //["Niger","",],
-  //["Nigeria","",],
-  //["Niue","",],
-  //["Norfolk Island","",],
-  //["North Korea","",],
-  //["Northern Mariana Islands","",],
-  //["Norway","",],
-  //["Oman","",],
-  //["Pakistan","",],
-  //["Palau","",],
-  //["Palestine","",],
-  //["Panama","",],
-  //["Papua New Guinea","",],
-  //["Paraguay","",],
-  //["Peru","",],
-  //["Philippines","",],
-  //["Pitcairn Islands","",],
-  //["Poland","",],
-  //["Portugal","",],
-  //["Puerto Rico","",],
-  //["Qatar","",],
-  //["Romania","",],
-  //["Russia","",],
-  //["Rwanda","",],
-  //["Reunion","",],
-  //["Saint Helena","",],
-  //["Saint Kitts and Nevis","",],
-  //["Saint Lucia","",],
-  //["Saint Pierre and Miquelon","",],
-  //["Samoa","",],
-  //["San Marino","",],
-  //["Saudi Arabia","",],
-  //["Senegal","",],
-  //["Serbia","",],
-  //["Seychelles","",],
-  //["Sierra Leone","",],
-  //["Singapore","",],
-  //["Slovakia","",],
-  //["Slovenia","",],
-  //["Solomon Islands","",],
-  //["Somalia","",],
-  //["South Africa","",],
-  //["South Georgia and The South Sandwich Islands","",],
-  //["South Korea","",],
-  //["South Sudan","",],
-  //["Spain","",],
-  //["Sri Lanka","",],
-  //["Sudan","",],
-  //["Suriname","",],
-  //["Sweden","",],
-  //["Switzerland","",],
-  //["Syria","",],
-  //["Sao Tome and Principe","",],
-  //["Taiwan","",],
-  //["Tajikistan","",],
-  //["Tanzania","",],
-  //["Thailand","",],
-  //["Timor-Leste","",],
-  //["Togo","",],
-  //["Tokelau","",],
-  //["Tonga","",],
-  //["Trinidad and Tobago","",],
-  //["Tunisia","",],
-  //["Turkey","",],
-  //["Turkmenistan","",],
-  //["Turks and Caicos Islands","",],
-  //["Tuvalu","",],
-  //["U.S. Virgin Islands","",],
-  //["Uganda","",],
-  //["Ukraine","",],
-  //["United Arab Emirates","",],
-  //["United Kingdom","",],
-  //["United States","",],
-  //["Uruguay","",],
-  //["Uzbekistan","",],
-  //["Vanuatu","",],
-  //["Vatican City","",],
-  //["Venezuela","",],
-  //["Vietnam","",],
-  //["Wallis and Futuna","",],
-  //["Western Sahara","",],
-  //["Yemen","",],
-  //["Zambia","",],
-  //["Zimbabwe","",],
-];
-
+var countries = [];
+var countriesCopy = [];
 var countriesShuffled = [];
 
 var currCountry;
 var guesses = 0;
+
+async function main() {
+  await readCountryData();
+  newFlag();
+  autocomplete();
+}
+
+async function readCountryData() {
+  const response = await fetch("country_data.csv");
+  const data = await response.text();
+
+  // Split the CSV data into rows
+  const rows = data.split("\n");
+
+  // Iterate through rows and extract country information
+  for (let i = 1; i < rows.length; i++) {
+    const columns = rows[i].split(",");
+    const countryName = columns[0].trim();
+    const flagPath = columns[1].trim();
+
+    // Add the country to the array
+    countries.push([countryName, flagPath]);
+  }
+
+  // Store new countries in copy array
+  countriesCopy = [...countries];
+
+  //console.log(countries);
+}
 
 function shuffleCountries() {
   countriesShuffled = [...countries];
@@ -250,11 +40,6 @@ function shuffleCountries() {
 }
 
 function newFlag() {
-  // Shuffle flags in first iteration
-  if (countriesShuffled.length === 0) {
-    shuffleCountries();
-  }
-
   // Change title
   document.getElementById("body-title").querySelector("h2").textContent =
     "Where is this flag from?";
@@ -265,7 +50,16 @@ function newFlag() {
   document.getElementById("search").focus();
 
   // Get random flag file
-  currCountry = countriesShuffled.shift();
+  do {
+    // Shuffle flags in first iteration
+    if (countriesShuffled.length === 0) {
+      shuffleCountries();
+    }
+
+    /*Change from countriesCopy to CountriesShuffle to control if 
+      the flags are sorted or shuffled*/
+    currCountry = countriesCopy.shift();
+  } while (!currCountry[1]);
 
   // Create an image object
   var tempImage = new Image();
@@ -353,20 +147,21 @@ function autocomplete() {
   var inp = document.getElementById("search");
   inp.addEventListener("input", handleInputChange);
   inp.addEventListener("click", handleInputChange);
-  function handleInputChange(e) {
+
+  function handleInputChange() {
     var a,
       b,
       i,
-      val = this.value;
+      val = inp.value;
     /*close any already open lists of autocompleted values*/
     closeAllLists();
 
     /*create a DIV element that will contain the items (values):*/
     a = document.createElement("DIV");
-    a.setAttribute("id", this.id + "autocomplete-list");
+    a.setAttribute("id", inp.id + "autocomplete-list");
     a.setAttribute("class", "autocomplete-items");
     /*append the DIV element as a child of the autocomplete container:*/
-    this.parentNode.appendChild(a);
+    inp.parentNode.appendChild(a);
     /*limit number of items*/
     const max_items = 6;
     let items = 0;
@@ -395,7 +190,7 @@ function autocomplete() {
     }
 
     /*add focus*/
-    var x = document.getElementById(this.id + "autocomplete-list");
+    var x = document.getElementById(inp.id + "autocomplete-list");
     if (x) x = x.getElementsByTagName("div");
     currentFocus = 0;
     addActive(x);
@@ -403,7 +198,7 @@ function autocomplete() {
 
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function (e) {
-    var x = document.getElementById(this.id + "autocomplete-list");
+    var x = document.getElementById(inp.id + "autocomplete-list");
     if (x) x = x.getElementsByTagName("div");
     if (e.keyCode == 40) {
       /*If the arrow DOWN key is pressed,
@@ -418,9 +213,13 @@ function autocomplete() {
       currentFocus--;
       /*and and make the current item more visible:*/
       addActive(x);
-    } else if (e.key === "Enter" && x && x.length !== 0) {
+    } else if (e.key === "Enter") {
       /*and simulate a click on the "active" item:*/
-      x[currentFocus].click();
+      if (x && x.length !== 0) {
+        x[currentFocus].click();
+      } else {
+        handleInputChange();
+      }
     }
   });
 
@@ -471,7 +270,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelector("button");
 
   endGameButton.addEventListener("mousedown", newFlag);
-
   endGameButton.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       newFlag();
