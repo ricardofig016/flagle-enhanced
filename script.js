@@ -22,10 +22,11 @@ async function readCountryData() {
   for (let i = 1; i < rows.length; i++) {
     const columns = rows[i].split(",");
     const countryName = columns[0].trim();
-    const flagPath = columns[1].trim();
+    const category = columns[1].trim();
+    const flagPath = columns[2].trim();
 
     // Add the country to the array
-    countries.push([countryName, flagPath]);
+    countries.push([countryName, category, flagPath]);
   }
 
   // Store new countries in copy array
@@ -58,14 +59,15 @@ function newFlag() {
 
     /*Change from countriesCopy to CountriesShuffle to control if 
       the flags are sorted or shuffled*/
-    currCountry = countriesShuffled.shift();
-  } while (!currCountry[1]);
+    //currCountry = countriesShuffled.shift();
+    currCountry = countriesCopy.shift();
+  } while (!currCountry[2]);
 
   // Create an image object
   var tempImage = new Image();
 
   // Set the source of the temporary image to the random flag image
-  tempImage.src = currCountry[1];
+  tempImage.src = currCountry[2];
 
   // When the temporary image is loaded, get its width and height
   tempImage.onload = function () {
@@ -109,13 +111,13 @@ function showRandomSection() {
   while (randomSection.style.backgroundImage) {
     randomSection = flagSections[Math.floor(Math.random() * 6)];
   }
-  randomSection.style.backgroundImage = 'url("' + currCountry[1] + '")';
+  randomSection.style.backgroundImage = 'url("' + currCountry[2] + '")';
 }
 
 function showAllSections() {
   var flagSections = document.querySelectorAll(".flag-row div");
   flagSections.forEach((section) => {
-    section.style.backgroundImage = 'url("' + currCountry[1] + '")';
+    section.style.backgroundImage = 'url("' + currCountry[2] + '")';
   });
 }
 
