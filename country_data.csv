@@ -1,18 +1,16 @@
-Country,Flag Path
+Geopolitical Entity,Category,Flag
 Afghanistan,assets/flags/Flag_of_Afghanistan-512x341.png
 Albania,assets/flags/Flag_of_Albania-512x366.png
 Algeria,assets/flags/Flag_of_Algeria-512x341.png
-American Samoa,
 Andorra,assets/flags/Flag_of_Andorra-512x358.png
 Angola,assets/flags/Flag_of_Angola-512x341.png
-Anguilla,
 Antarctica,assets/flags/Flag_of_Antarctica-512x341.png
 Antigua and Barbuda,assets/flags/Flag_of_Antigua_and_Barbuda-512x341.png
 Argentina,assets/flags/Flag_of_Argentina-512x320.png
 Armenia,assets/flags/Flag_of_Armenia-512x256.png
-Aruba,
+Artsakh,assets/flags/Flag_of_Artsakh-512x256.png
 Australia,assets/flags/Flag_of_Australia-512x256.png
-Austria,assets/flags/Flag_of_Australia-512x256.png
+Austria,assets/flags/Flag_of_Austria-512x341.png
 Azerbaijan,assets/flags/Flag_of_Azerbaijan-512x256.png
 Bahamas,assets/flags/Flag_of_Bahamas-512x256.png
 Bahrain,assets/flags/Flag_of_Bahrain-512x307.png
@@ -22,13 +20,11 @@ Belarus,assets/flags/Flag_of_Belarus-512x256.png
 Belgium,assets/flags/Flag_of_Belgium-512x445.png
 Belize,assets/flags/Flag_of_Belize-512x307.png
 Benin,assets/flags/Flag_of_Benin-512x341.png
-Bermuda,
 Bhutan,assets/flags/Flag_of_Bhutan-512x341.png
 Bolivia,assets/flags/Flag_of_Bolivia-512x348.png
 Bosnia and Herzegovina,assets/flags/Flag_of_Bosnia_and_Herzegovina-512x256.png
 Botswana,assets/flags/Flag_of_Botswana-512x341.png
 Brazil,assets/flags/Flag_of_Brazil-512x358.png
-British Indian Ocean Territory,
 Brunei,assets/flags/Flag_of_Brunei-512x256.png
 Bulgaria,assets/flags/Flag_of_Bulgaria-512x307.png
 Burkina Faso,assets/flags/Flag_of_Burkina_Faso-512x341.png
@@ -37,204 +33,180 @@ Cambodia,assets/flags/Flag_of_Cambodia-512x328.png
 Cameroon,assets/flags/Flag_of_Cameroon-512x341.png
 Canada,assets/flags/Flag_of_Canada-512x256.png
 Cape Verde,assets/flags/Flag_of_Cape_Verde-512x301.png
-Cayman Islands,
 Central African Republic,assets/flags/Flag_of_Central_African_Republic-512x341.png
 Chad,assets/flags/Flag_of_Chad-512x341.png
-Chile,
-China,
-Christmas Island,
-Cocos Islands,
-Colombia,
-Comoros,
-Congo,
-Cook Islands,
-Costa Rica,
-Cote D'ivoire,
-Croatia,
-Cuba,
-Cyprus,
-Czechia,
-Democratic Republic of the Congo,
-Denmark,
-Djibouti,
-Dominica,
-Dominican Republic,
-Ecuador,
-Egypt,
-El Salvador,
-Equatorial Guinea,
-Eritrea,
-Estonia,
-Eswatini,
-Ethiopia,
-Falkland Islands (Malvinas),
-Faroe Islands,
-Fiji,
-Finland,
-France,
-French Guiana,
-French Polynesia,
-French Southern Territories,
-Gabon,
-Gambia,
-Georgia,
-Germany,
-Ghana,
-Gibraltar,
-Greece,
-Greenland,
-Grenada,
-Guadeloupe,
-Guam,
-Guatemala,
-Guernsey,
-Guinea,
-Guinea-Bissau,
-Guyana,
-Haiti,
-Honduras,
-Hong Kong,
-Hungary,
-Iceland,
-India,
-Indonesia,
-Iran,
-Iraq,
-Ireland,
-Isle of Man,
-Israel,
-Italy,
-Jamaica,
-Japan,
-Jersey,
-Jordan,
-Kazakhstan,
-Kenya,
-Kiribati,
-Kosovo,
-Kuwait,
-Kyrgyzstan,
-Laos,
-Latvia,
-Lebanon,
-Lesotho,
-Liberia,
-Libya,
-Liechtenstein,
-Lithuania,
-Luxembourg,
-Macau,
-Macedonia,
-Madagascar,
-Malawi,
-Malaysia,
-Maldives,
-Mali,
-Malta,
-Marshall Islands,
-Martinique,
-Mauritania,
-Mauritius,
-Mayotte,
-Mexico,
-Micronesia,
-Moldova,
-Monaco,
-Mongolia,
-Montenegro,
-Montserrat,
-Morocco,
-Mozambique,
-Myanmar,
-Namibia,
-Nauru,
-Nepal,
-Netherlands,
-New Caledonia,
-New Zealand,
-Nicaragua,
-Niger,
-Nigeria,
-Niue,
-Norfolk Island,
-North Korea,
-Northern Mariana Islands,
-Norway,
-Oman,
-Pakistan,
-Palau,
-Palestine,
-Panama,
-Papua New Guinea,
-Paraguay,
-Peru,
-Philippines,
-Pitcairn Islands,
-Poland,
-Portugal,
-Puerto Rico,
-Qatar,
-Republic of Artsakh,assets/flags/Flag_of_Artsakh-512x256.png
-Reunion,
-Romania,
-Russia,
-Rwanda,
-Saint Helena,
-Saint Kitts and Nevis,
-Saint Lucia,
-Saint Pierre and Miquelon,
-Samoa,
-San Marino,
-Saudi Arabia,
-Senegal,
-Serbia,
-Seychelles,
-Sierra Leone,
-Singapore,
-Slovakia,
-Slovenia,
-Solomon Islands,
-Somalia,
-South Africa,
-South Georgia and The South Sandwich Islands,
-South Korea,
-South Sudan,
-Spain,
-Sri Lanka,
-Sudan,
-Suriname,
-Sweden,
-Switzerland,
-Syria,
-Sao Tome and Principe,
-Taiwan,
-Tajikistan,
-Tanzania,
-Thailand,
-Timor-Leste,
-Togo,
-Tokelau,
-Tonga,
-Trinidad and Tobago,
-Tunisia,
-Turkey,
-Turkmenistan,
-Turks and Caicos Islands,
-Tuvalu,
-U.S. Virgin Islands,
-Uganda,
-Ukraine,
-United Arab Emirates,
-United Kingdom,
-United States,
-Uruguay,
-Uzbekistan,
-Vanuatu,
-Vatican City,
-Venezuela,
-Vietnam,
-Wallis and Futuna,
-Western Sahara,
-Yemen,
-Zambia,
-Zimbabwe,
+Chile,assets/flags/Flag_of_Chile-512x341.png
+China,assets/flags/Flag_of_China-512x341.png
+Colombia,assets/flags/Flag_of_Colombia-512x341.png
+Comoros,assets/flags/Flag_of_Comoros-512x307.png
+Cook Islands,assets/flags/Flag_of_Cook_Islands-512x256.png
+Costa Rica,assets/flags/Flag_of_Costa_Rica-512x307.png
+Croatia,assets/flags/Flag_of_Croatia-512x256.png
+Cuba,assets/flags/Flag_of_Cuba-512x256.png
+Cyprus,assets/flags/Flag_of_Cyprus-512x341.png
+Czech Republic,assets/flags/Flag_of_Czech_Republic-512x341.png
+Democratic Republic of the Congo,assets/flags/Flag_of_Democratic_Republic_of_Congo-512x385.png
+Denmark,assets/flags/Flag_of_Denmark-512x386.png
+Djibouti,assets/flags/Flag_of_Djibouti-512x341.png
+Dominica,assets/flags/Flag_of_Dominica-512x256.png
+Dominican Republic,assets/flags/Flag_of_Dominican_Republic-512x341.png
+Ecuador,assets/flags/Flag_of_Ecuador-512x341.png
+Egypt,assets/flags/Flag_of_Egypt-512x341.png
+El Salvador,assets/flags/Flag_of_El_Salvador-512x289.png
+England,assets/flags/Flag_of_England-512x307.png
+Equatorial Guinea,assets/flags/Flag_of_Equatorial_Guinea-512x341.png
+Eritrea,assets/flags/Flag_of_Eritrea-512x256.png
+Estonia,assets/flags/Flag_of_Estonia-512x326.png
+Eswatini,assets/flags/Flag_of_Eswatini-512x341.png
+Ethiopia,assets/flags/Flag_of_Ethiopia-512x256.png
+Federated States of Micronesia,assets/flags/Flag_of_Federated_States_of_Micronesia-512x269.png
+Fiji,assets/flags/Flag_of_Fiji-512x256.png
+Finland,assets/flags/Flag_of_Finland-512x312.png
+France,assets/flags/Flag_of_France-512x341.png
+Gabon,assets/flags/Flag_of_Gabon-512x385.png
+Gambia,assets/flags/Flag_of_Gambia-512x341.png
+Georgia,assets/flags/Flag_of_Georgia-512x341.png
+Germany,assets/flags/Flag_of_Germany-512x307.png
+Ghana,assets/flags/Flag_of_Ghana-512x341.png
+Greece,assets/flags/Flag_of_Greece-512x341.png
+Grenada,assets/flags/Flag_of_Grenada-512x307.png
+Guatemala,assets/flags/Flag_of_Guatemala-512x320.png
+Guinea,assets/flags/Flag_of_Guinea-512x341.png
+Guinea-Bissau,assets/flags/Flag_of_Guinea_Bissau-512x256.png
+Guyana,assets/flags/Flag_of_Guyana-512x307.png
+Haiti,assets/flags/Flag_of_Haiti-512x307.png
+Honduras,assets/flags/Flag_of_Honduras-512x256.png
+Hong Kong,assets/flags/Flag_of_Hong_Kong-512x341.png
+Hungary,assets/flags/Flag_of_Hungary-512x256.png
+Iceland,assets/flags/Flag_of_Iceland-512x368.png
+India,assets/flags/Flag_of_India-512x341.png
+Indonesia,assets/flags/Flag_of_Indonesia-512x341.png
+Iran,assets/flags/Flag_of_Iran-512x293.png
+Iraq,assets/flags/Flag_of_Iraq-512x341.png
+Ireland,assets/flags/Flag_of_Ireland-512x256.png
+Israel,assets/flags/Flag_of_Israel-512x371.png
+Italy,assets/flags/Flag_of_Italy-512x341.png
+Ivory Coast,assets/flags/Flag_of_Ivory_Coast-512x341.png
+Jamaica,assets/flags/Flag_of_Jamaica-512x256.png
+Japan,assets/flags/Flag_of_Japan-512x341.png
+Jordan,assets/flags/Flag_of_Jordan-512x256.png
+Kazakhstan,assets/flags/Flag_of_Kazakhstan-512x256.png
+Kenya,assets/flags/Flag_of_Kenya-512x341.png
+Kiribati,assets/flags/Flag_of_Kiribati-512x256.png
+Kosovo,assets/flags/Flag_of_Kosovo-512x366.png
+Kuwait,assets/flags/Flag_of_Kuwait-512x256.png
+Kyrgyzstan,assets/flags/Flag_of_Kyrgyzstan-512x307.png
+Laos,assets/flags/Flag_of_Laos-512x341.png
+Latvia,assets/flags/Flag_of_Latvia-512x256.png
+Lebanon,assets/flags/Flag_of_Lebanon-512x341.png
+Lesotho,assets/flags/Flag_of_Lesotho-512x341.png
+Liberia,assets/flags/Flag_of_Liberia-512x269.png
+Libya,assets/flags/Flag_of_Libya-512x256.png
+Liechtenstein,assets/flags/Flag_of_Liechtenstein-512x307.png
+Lithuania,assets/flags/Flag_of_Lithuania-512x307.png
+Luxembourg,assets/flags/Flag_of_Luxembourg-512x307.png
+Madagascar,assets/flags/Flag_of_Madagascar-512x341.png
+Malawi,assets/flags/Flag_of_Malawi-512x341.png
+Malaysia,assets/flags/Flag_of_Malaysia-512x256.png
+Maldives,assets/flags/Flag_of_Maldives-512x341.png
+Mali,assets/flags/Flag_of_Mali-512x341.png
+Malta,assets/flags/Flag_of_Malta-512x341.png
+Marshall Islands,assets/flags/Flag_of_Marshall_Islands-512x269.png
+Mauritania,assets/flags/Flag_of_Mauritania-512x341.png
+Mauritius,assets/flags/Flag_of_Mauritius-512x341.png
+Mexico,assets/flags/Flag_of_Mexico-512x293.png
+Moldova,assets/flags/Flag_of_Moldova-512x256.png
+Monaco,assets/flags/Flag_of_Monaco-512x410.png
+Mongolia,assets/flags/Flag_of_Mongolia-512x256.png
+Montenegro,assets/flags/Flag_of_Montenegro-512x256.png
+Morocco,assets/flags/Flag_of_Morocco-512x341.png
+Mozambique,assets/flags/Flag_of_Mozambique-512x341.png
+Myanmar,assets/flags/Flag_of_Myanmar-512x341.png
+Namibia,assets/flags/Flag_of_Namibia-512x341.png
+Nauru,assets/flags/Flag_of_Nauru-512x256.png
+Nepal,assets/flags/Flag_of_Nepal-512x624.png
+Netherlands,assets/flags/Flag_of_Netherlands-512x341.png
+New Zealand,assets/flags/Flag_of_New_Zealand-512x256.png
+Nicaragua,assets/flags/Flag_of_Nicaragua-512x307.png
+Niger,assets/flags/Flag_of_Niger-512x438.png
+Nigeria,assets/flags/Flag_of_Nigeria-512x256.png
+Niue,assets/flags/Flag_of_Niue-512x256.png
+North Korea,assets/flags/Flag_of_North_Korea-512x256.png
+North Macedonia,assets/flags/Flag_of_North_Macedonia-512x256.png
+Northern Cyprus,assets/flags/Flag_of_Northern_Cyprus-512x341.png
+Norway,assets/flags/Flag_of_Norway-512x371.png
+Oman,assets/flags/Flag_of_Oman-512x256.png
+Pakistan,assets/flags/Flag_of_Pakistan-512x341.png
+Palau,assets/flags/Flag_of_Palau-512x320.png
+Palestine,assets/flags/Flag_of_Palestine-512x256.png
+Panama,assets/flags/Flag_of_Panama-512x341.png
+Papua New Guinea,assets/flags/Flag_of_Papua_New_Guinea-512x385.png
+Paraguay,assets/flags/Flag_of_Paraguay-512x281.png
+Peru,assets/flags/Flag_of_Peru-512x341.png
+Philippines,assets/flags/Flag_of_Philippines-512x256.png
+Poland,assets/flags/Flag_of_Poland-512x320.png
+Portugal,assets/flags/Flag_of_Portugal-512x341.png
+Qatar,assets/flags/Flag_of_Qatar-512x201.png
+Rebublic of Abkhazia,assets/flags/Flag_of_Republic_of_Abkhazia-512x256.png
+Republic of the Congo,assets/flags/Flag_of_Republic_of_Congo-512x341.png
+Romania,assets/flags/Flag_of_Romania-512x341.png
+Russia,assets/flags/Flag_of_Russia-512x341.png
+Rwanda,assets/flags/Flag_of_Rwanda-512x341.png
+Sahrawi Arab Democratic Rebublic,assets/flags/Flag_of_Sahrawi_Arab_Democratic_Republic-512x256.png
+Saint Kitts and Nevis,assets/flags/Flag_of_Saint_Kitts_and_Nevis-512x341.png
+Saint Lucia,assets/flags/Flag_of_Saint_Lucia-512x256.png
+Saint Vincent and the Grenadines,assets/flags/Flag_of_Saint_Vincent_and_the_Grenadines-512x341.png
+Samoa,assets/flags/Flag_of_Samoa-512x256.png
+San Marino,assets/flags/Flag_of_San_Marino-512x385.png
+Sao Tome and Principe,assets/flags/Flag_of_Sao_Tome_and_Principe-512x256.png
+Saudi Arabia,assets/flags/Flag_of_Saudi_Arabia-512x341.png
+Scotland,assets/flags/Flag_of_Scotland-512x307.png
+Senegal,assets/flags/Flag_of_Senegal-512x341.png
+Serbia,assets/flags/Flag_of_Serbia-512x341.png
+Seychelles,assets/flags/Flag_of_Seychelles-512x256.png
+Sierra Leone,assets/flags/Flag_of_Sierra_Leone-512x341.png
+Singapore,assets/flags/Flag_of_Singapore-512x341.png
+Slovakia,assets/flags/Flag_of_Slovakia-512x341.png
+Slovenia,assets/flags/Flag_of_Slovenia-512x256.png
+Solomon Islands,assets/flags/Flag_of_Solomon_Islands-512x256.png
+Somalia,assets/flags/Flag_of_Somalia-512x341.png
+Somaliland,assets/flags/Flag_of_Somaliland-512x256.png
+South Africa,assets/flags/Flag_of_South_Africa-512x341.png
+South Korea,assets/flags/Flag_of_South_Korea-512x341.png
+South Ossetia,assets/flags/Flag_of_South_Ossetia-512x256.png
+South Sudan,assets/flags/Flag_of_South_Sudan-512x256.png
+Spain,assets/flags/Flag_of_Spain-512x341.png
+Sri Lanka,assets/flags/Flag_of_Sri_Lanka-512x256.png
+Sudan,assets/flags/Flag_of_Sudan-512x256.png
+Suriname,assets/flags/Flag_of_Suriname-512x341.png
+Sweden,assets/flags/Flag_of_Sweden-512x318.png
+Switzerland,assets/flags/Flag_of_Switzerland-512x512.png
+Syria,assets/flags/Flag_of_Syria-512x341.png
+Taiwan,assets/flags/Flag_of_Taiwan-512x341.png
+Tajikistan,assets/flags/Flag_of_Tajikistan-512x256.png
+Tanzania,assets/flags/Flag_of_Tanzania-512x341.png
+Thailand,assets/flags/Flag_of_Thailand-512x341.png
+Timor-Leste,assets/flags/Flag_of_Timor_Leste-512x256.png
+Togo,assets/flags/Flag_of_Togo-512x316.png
+Tonga,assets/flags/Flag_of_Tonga-512x256.png
+Transnistria,assets/flags/Flag_of_Transnistria-512x256.png
+Trinidad and Tobago,assets/flags/Flag_of_Trinidad_and_Tobago-512x307.png
+Tunisia,assets/flags/Flag_of_Tunisia-512x341.png
+Turkey,assets/flags/Flag_of_Turkey-512x341.png
+Turkmenistan,assets/flags/Flag_of_Turkmenistan-512x341.png
+Tuvalu,assets/flags/Flag_of_Tuvalu-512x256.png
+Uganda,assets/flags/Flag_of_Uganda-512x341.png
+Ukraine,assets/flags/Flag_of_Ukraine-512x341.png
+United Arab Emirates,assets/flags/Flag_of_United_Arab_Emirates-512x256.png
+United Kingdom,assets/flags/Flag_of_United_Kingdom-512x256.png
+United States,assets/flags/Flag_of_United_States-512x269.png
+Uruguay,assets/flags/Flag_of_Uruguay-512x341.png
+Uzbekistan,assets/flags/Flag_of_Uzbekistan-512x256.png
+Vanuatu,assets/flags/Flag_of_Vanuatu-512x307.png
+Vatican City,assets/flags/Flag_of_Vatican_City-512x512.png
+Venezuela,assets/flags/Flag_of_Venezuela-512x341.png
+Vietnam,assets/flags/Flag_of_Vietnam-512x341.png
+Wales,assets/flags/Flag_of_Wales-512x307.png
+Yemen,assets/flags/Flag_of_Yemen-512x341.png
+Zambia,assets/flags/Flag_of_Zambia-512x341.png
+Zimbabwe,assets/flags/Flag_of_Zimbabwe-512x256.png
