@@ -58,7 +58,7 @@ function newFlag() {
 
     /*Change from countriesCopy to CountriesShuffle to control if 
       the flags are sorted or shuffled*/
-    currCountry = countriesCopy.shift();
+    currCountry = countriesShuffled.shift();
   } while (!currCountry[1]);
 
   // Create an image object
