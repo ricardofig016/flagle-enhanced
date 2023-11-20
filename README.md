@@ -24,7 +24,7 @@ Independent countries recognized for their full sovereignty. They have defined t
 
 - **Brazil**: The largest country in South America, governed as a federal republic with full sovereignty.
 
-### Dependent Territories
+### Other Territories
 
 **Definition:**
 
