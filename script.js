@@ -32,6 +32,9 @@ async function readCountryData() {
   // Store new countries in copy array
   countriesCopy = [...countries];
 
+  // Ignore first n countries
+  //countriesCopy.splice(0, 130);
+
   //console.log(countries);
 }
 
@@ -41,6 +44,8 @@ function shuffleCountries() {
 }
 
 function newFlag() {
+  console.log("finding new flag");
+
   // Change title
   document.getElementById("body-title").querySelector("h2").textContent =
     "Where is this flag from?";
@@ -61,7 +66,9 @@ function newFlag() {
       the flags are sorted or shuffled*/
     //currCountry = countriesShuffled.shift();
     currCountry = countriesCopy.shift();
-  } while (!currCountry[2]);
+  } while (!currCountry[2] || currCountry[1] != "Other Territories");
+
+  console.log("new flag found: " + currCountry[0]);
 
   // Create an image object
   var tempImage = new Image();
@@ -86,6 +93,8 @@ function newFlag() {
       section.style.backgroundPosition = posX + "px " + posY + "px";
     });
   };
+
+  console.log("new flag image loaded");
 }
 
 function handleSearchSubmit(inputText) {
