@@ -1,5 +1,7 @@
-Geopolitical Entity,Category,Flag
+Name,Category,Flag
 Abkhazia,Other Territories,assets/flags/Flag_of_Republic_of_Abkhazia-512x256.png
+Abyei Area,Other Territories,assets/flags/Flag_of_the_Abyei_Area.png
+Adjara,Other Territories,assets/flags/Flag_of_Adjara.png
 Afghanistan,UN Member State,assets/flags/Flag_of_Afghanistan-512x341.png
 Aland,Other Territories,assets/flags/Flag_of_Åland-512x335.png
 Albania,UN Member State,assets/flags/Flag_of_Albania-512x366.png
@@ -10,6 +12,7 @@ Angola,UN Member State,assets/flags/Flag_of_Angola-512x341.png
 Anguilla,Other Territories,assets/flags/Flag_of_Anguilla-512x256.png
 Antarctica,Other Territories,assets/flags/Flag_of_Antarctica-512x341.png
 Antigua and Barbuda,UN Member State,assets/flags/Flag_of_Antigua_and_Barbuda-512x341.png
+Aosta Valley,Other Territories,assets/flags/Flag_of_Valle_d'Aosta.png
 Argentina,UN Member State,assets/flags/Flag_of_Argentina-512x320.png
 Armenia,UN Member State,assets/flags/Flag_of_Armenia-512x256.png
 Artsakh,Other Territories,assets/flags/Flag_of_Artsakh-512x256.png
@@ -17,12 +20,15 @@ Aruba,Other Territories,assets/flags/Flag_of_Aruba-512x341.png
 Ascension,Other Territories,assets/flags/Flag_of_Ascension_Island-512x256.png
 Australia,UN Member State,assets/flags/Flag_of_Australia-512x256.png
 Austria,UN Member State,assets/flags/Flag_of_Austria-512x341.png
+Azad Kashmir,Other Territories,assets/flags/Flag_of_Azad_Kashmir.png
 Azerbaijan,UN Member State,assets/flags/Flag_of_Azerbaijan-512x256.png
 Azores,Other Territories,assets/flags/Flag_of_Azores-512x341.png
 Bahamas,UN Member State,assets/flags/Flag_of_Bahamas-512x256.png
 Bahrain,UN Member State,assets/flags/Flag_of_Bahrain-512x307.png
 Bangladesh,UN Member State,assets/flags/Flag_of_Bangladesh-512x307.png
+Bangsamoro,Other Territories,assets/flags/Flag_of_Bangsamoro.png
 Barbados,UN Member State,assets/flags/Flag_of_Barbados-512x341.png
+Barbuda,Other Territories,assets/flags/Flag_of_Barbuda.png
 Belarus,UN Member State,assets/flags/Flag_of_Belarus-512x256.png
 Belgium,UN Member State,assets/flags/Flag_of_Belgium-512x445.png
 Belize,UN Member State,assets/flags/Flag_of_Belize-512x307.png
@@ -58,6 +64,7 @@ Colombia,UN Member State,assets/flags/Flag_of_Colombia-512x341.png
 Comoros,UN Member State,assets/flags/Flag_of_Comoros-512x307.png
 Cook Islands,Other Territories,assets/flags/Flag_of_Cook_Islands-512x256.png
 Costa Rica,UN Member State,assets/flags/Flag_of_Costa_Rica-512x307.png
+Crimea,Other Territories,assets/flags/Flag_of_Crimea.png
 Croatia,UN Member State,assets/flags/Flag_of_Croatia-512x256.png
 Cuba,UN Member State,assets/flags/Flag_of_Cuba-512x256.png
 Curaçao,Other Territories,assets/flags/Flag_of_Curaçao-512x341.png
@@ -86,12 +93,17 @@ France,UN Member State,assets/flags/Flag_of_France-512x341.png
 French Guiana,Other Territories,assets/flags/Flag_of_French_Guiana-512x341.png
 French Polynesia,Other Territories,assets/flags/Flag_of_French_Polynesia-512x341.png
 French Southern and Antarctic Lands,Other Territories,assets/flags/Flag_of_French_Southern_and_Antarctic_Lands-512x341.png
+Friuli-Venezia Giulia, Other Territories,assets/flags/Flag_of_Friuli-Venezia_Giulia.png
 Gabon,UN Member State,assets/flags/Flag_of_Gabon-512x385.png
+Gagauzia,Other Territories,assets/flags/Flag_of_Gagauzia.png
+Galmudug,Other Territories,assets/flags/Flag_of_Galmudug_State_of_Somalia.png
 Gambia,UN Member State,assets/flags/Flag_of_Gambia-512x341.png
 Georgia,UN Member State,assets/flags/Flag_of_Georgia-512x341.png
 Germany,UN Member State,assets/flags/Flag_of_Germany-512x307.png
 Ghana,UN Member State,assets/flags/Flag_of_Ghana-512x341.png
 Gibraltar,Other Territories,assets/flags/Flag_of_Gibraltar-512x256.png
+Gilgit-Baltistan,Other Territories,assets/flags/Flag_of_Gilgit-Baltistan.png
+Gorno-Badakhshan,Other Territories,assets/flags/Flag_of_Gorno-Badakhshan.png
 Greece,UN Member State,assets/flags/Flag_of_Greece-512x341.png
 Greenland,Other Territories,assets/flags/Flag_of_Greenland-512x341.png
 Grenada,UN Member State,assets/flags/Flag_of_Grenada-512x307.png
@@ -121,10 +133,12 @@ Japan,UN Member State,assets/flags/Flag_of_Japan-512x341.png
 Jersey,Other Territories,assets/flags/Flag_of_Jersey-512x307.png
 Johnston Atoll,Other Territories,assets/flags/Flag_of_Johnston_Atoll-512x307.png
 Jordan,UN Member State,assets/flags/Flag_of_Jordan-512x256.png
+Karakalpakstan,Other Territories,assets/flags/Flag_of_Karakalpakstan.png
 Kazakhstan,UN Member State,assets/flags/Flag_of_Kazakhstan-512x256.png
 Kenya,UN Member State,assets/flags/Flag_of_Kenya-512x341.png
 Kiribati,UN Member State,assets/flags/Flag_of_Kiribati-512x256.png
 Kosovo,Other Territories,assets/flags/Flag_of_Kosovo-512x366.png
+Kurdistan Region,Other Territories,assets/flags/Flag_of_Kurdistan.png
 Kuwait,UN Member State,assets/flags/Flag_of_Kuwait-512x256.png
 Kyrgyzstan,UN Member State,assets/flags/Flag_of_Kyrgyzstan-512x307.png
 Laos,UN Member State,assets/flags/Flag_of_Laos-512x341.png
@@ -166,6 +180,7 @@ Nauru,UN Member State,assets/flags/Flag_of_Nauru-512x256.png
 Navassa Island,Other Territories,assets/flags/Flag_of_Navassa_Island-512x307.png
 Nepal,UN Member State,assets/flags/Flag_of_Nepal-512x624.png
 Netherlands,UN Member State,assets/flags/Flag_of_Netherlands-512x341.png
+Nevis,Other Territories,assets/flags/Flag_of_Nevis.png
 New Caledonia,Other Territories,assets/flags/Flag_of_New_Caledonia-512x256.png
 New Zealand,UN Member State,assets/flags/Flag_of_New_Zealand-512x256.png
 Nicaragua,UN Member State,assets/flags/Flag_of_Nicaragua-512x307.png
@@ -173,6 +188,7 @@ Niger,UN Member State,assets/flags/Flag_of_Niger-512x438.png
 Nigeria,UN Member State,assets/flags/Flag_of_Nigeria-512x256.png
 Niue,Other Territories,assets/flags/Flag_of_Niue-512x256.png
 Norfolk Island,Other Territories,assets/flags/Flag_of_Norfolk_Island-512x256.png
+North Caribbean Coast Autonomous Region,Other Territories,assets/flags/Flag_of_Region_Autonoma_del_Atlantico_Norte.png
 North Korea,UN Member State,assets/flags/Flag_of_North_Korea-512x256.png
 North Macedonia,UN Member State,assets/flags/Flag_of_North_Macedonia-512x256.png
 Northern Cyprus,Other Territories,assets/flags/Flag_of_Northern_Cyprus-512x341.png
@@ -192,10 +208,15 @@ Philippines,UN Member State,assets/flags/Flag_of_Philippines-512x256.png
 Pitcairn Islands,Other Territories,assets/flags/Flag_of_Pitcairn_Islands-512x256.png
 Poland,UN Member State,assets/flags/Flag_of_Poland-512x320.png
 Portugal,UN Member State,assets/flags/Flag_of_Portugal-512x341.png
+Principe,Other Territories,assets/flags/Flag_of_Principe.png
 Puerto Rico,Other Territories,assets/flags/Flag_of_Puerto_Rico-512x341.png
+Puntland,Other Territories,assets/flags/Flag_of_Puntland.png
 Qatar,UN Member State,assets/flags/Flag_of_Qatar-512x201.png
+Rebel Zapatista Autonomous Municipalities,Other Territories,assets/flags/Flag_of_Rebel_Zapatista_Autonomous_Municipalities.png
 Republic of the Congo,UN Member State,assets/flags/Flag_of_Republic_of_Congo-512x341.png
 Reunion,Other Territories,assets/flags/Flag_of_Reunion_Radiant_Volcano-512x337.png
+Rodrigues,Other Territories,assets/flags/Flag_of_Rodrigues.png
+Rojava,Other Territories,assets/flags/Flag_of_Rojava.png
 Romania,UN Member State,assets/flags/Flag_of_Romania-512x341.png
 Russia,UN Member State,assets/flags/Flag_of_Russia-512x341.png
 Rwanda,UN Member State,assets/flags/Flag_of_Rwanda-512x341.png
@@ -211,21 +232,25 @@ Saint Vincent and the Grenadines,UN Member State,assets/flags/Flag_of_Saint_Vinc
 Samoa,UN Member State,assets/flags/Flag_of_Samoa-512x256.png
 San Marino,UN Member State,assets/flags/Flag_of_San_Marino-512x385.png
 Sao Tome and Principe,UN Member State,assets/flags/Flag_of_Sao_Tome_and_Principe-512x256.png
+Sardinia,Other Territories,assets/flags/Flag_of_Sardinia.png
 Saudi Arabia,UN Member State,assets/flags/Flag_of_Saudi_Arabia-512x341.png
 Scotland,Other Territories,assets/flags/Flag_of_Scotland-512x307.png
 Senegal,UN Member State,assets/flags/Flag_of_Senegal-512x341.png
 Serbia,UN Member State,assets/flags/Flag_of_Serbia-512x341.png
 Seychelles,UN Member State,assets/flags/Flag_of_Seychelles-512x256.png
+Sicily,Other Territories,assets/flags/Flag_of_Sicily.png
 Sierra Leone,UN Member State,assets/flags/Flag_of_Sierra_Leone-512x341.png
 Singapore,UN Member State,assets/flags/Flag_of_Singapore-512x341.png
 Sint Eustatius,Other Territories,assets/flags/Flag_of_Sint_Eustatius-512x341.png
 Sint Maarten,Other Territories,assets/flags/Flag_of_Sint_Maarten-512x341.png
 Slovakia,UN Member State,assets/flags/Flag_of_Slovakia-512x341.png
 Slovenia,UN Member State,assets/flags/Flag_of_Slovenia-512x256.png
+Socotra,Other Territories,
 Solomon Islands,UN Member State,assets/flags/Flag_of_Solomon_Islands-512x256.png
 Somalia,UN Member State,assets/flags/Flag_of_Somalia-512x341.png
 Somaliland,Other Territories,assets/flags/Flag_of_Somaliland-512x256.png
 South Africa,UN Member State,assets/flags/Flag_of_South_Africa-512x341.png
+South Caribbean Coast Autonomous Region,Other Territories,assets/flags/Flag_of_Region_Autonoma_Atlantico_Sur.png
 South Georgia and the South Sandwich Islands,Other Territories,assets/flags/Flag_of_South_Georgia_and_the_South_Sandwich_Islands-512x256.png
 South Korea,UN Member State,assets/flags/Flag_of_South_Korea-512x341.png
 South Ossetia,Other Territories,assets/flags/Flag_of_South_Ossetia-512x256.png
@@ -245,6 +270,7 @@ Togo,UN Member State,assets/flags/Flag_of_Togo-512x316.png
 Tokelau,Other Territories,assets/flags/Flag_of_Tokelau-512x256.png
 Tonga,UN Member State,assets/flags/Flag_of_Tonga-512x256.png
 Transnistria,Other Territories,assets/flags/Flag_of_Transnistria-512x256.png
+Trentino-Alto Adige/Sudtirol,Other Territories,assets/flags/Flag_of_Trentino-Alto_Adige_Sudtirol.png
 Trinidad and Tobago,UN Member State,assets/flags/Flag_of_Trinidad_and_Tobago-512x307.png
 Tristan da Cunha,Other Territories,assets/flags/Flag_of_Tristan_da_Cunha-512x256.png
 Tunisia,UN Member State,assets/flags/Flag_of_Tunisia-512x341.png
@@ -264,9 +290,12 @@ Vanuatu,UN Member State,assets/flags/Flag_of_Vanuatu-512x307.png
 Vatican City,UN Member State,assets/flags/Flag_of_Vatican_City-512x512.png
 Venezuela,UN Member State,assets/flags/Flag_of_Venezuela-512x341.png
 Vietnam,UN Member State,assets/flags/Flag_of_Vietnam-512x341.png
+Vojvodina,Other Territories,assets/flags/Flag_of_Vojvodina.png
+Wa State,Other Territories,assets/flags/Flag_of_Wa_State.png
 Wake Island,Other Territories,assets/flags/Flag_of_Wake_Island-512x341.png
 Wales,Other Territories,assets/flags/Flag_of_Wales-512x307.png
 Wallis and Futuna,Other Territories,assets/flags/Flag_of_Wallis_and_Futuna-512x341.png
 Yemen,UN Member State,assets/flags/Flag_of_Yemen-512x341.png
 Zambia,UN Member State,assets/flags/Flag_of_Zambia-512x341.png
+Zanzibar,Other Territories,assets/flags/Flag_of_Zanzibar.png
 Zimbabwe,UN Member State,assets/flags/Flag_of_Zimbabwe-512x256.png
