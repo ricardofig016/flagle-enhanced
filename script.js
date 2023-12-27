@@ -1,46 +1,46 @@
-var countries = [];
-var countriesCopy = [];
-var countriesShuffled = [];
+var data = [];
+var dataCopy = [];
+var dataShuffled = [];
 
-var currCountry;
+var currEntry;
 var guesses = 0;
 
 async function main() {
-  await readCountryData();
+  await readData();
   newFlag();
   autocomplete();
 }
 
-async function readCountryData() {
-  const response = await fetch("country_data.csv");
-  const data = await response.text();
+async function readData() {
+  const response = await fetch("data.csv");
+  const data_csv = await response.text();
 
   // Split the CSV data into rows
-  const rows = data.split("\n");
+  const rows = data_csv.split("\n");
 
-  // Iterate through rows and extract country information
+  // Iterate through rows and extract entry information
   for (let i = 1; i < rows.length; i++) {
     const columns = rows[i].split(",");
-    const countryName = columns[0].trim();
+    const entryName = columns[0].trim();
     const category = columns[1].trim();
     const flagPath = columns[2].trim();
 
-    // Add the country to the array
-    countries.push([countryName, category, flagPath]);
+    // Add entry to data array
+    data.push([entryName, category, flagPath]);
   }
 
-  // Store new countries in copy array
-  countriesCopy = [...countries];
+  // Store new data in copy array
+  dataCopy = [...data];
 
-  // Ignore first n countries
-  //countriesCopy.splice(0, 130);
+  // Ignore first n entries
+  //dataCopy.splice(0, 130);
 
-  //console.log(countries);
+  //console.log(data);
 }
 
-function shuffleCountries() {
-  countriesShuffled = [...countries];
-  countriesShuffled.sort(() => Math.random() - 0.5);
+function shuffledata() {
+  dataShuffled = [...data];
+  dataShuffled.sort(() => Math.random() - 0.5);
 }
 
 function newFlag() {
@@ -58,23 +58,23 @@ function newFlag() {
   // Get random flag file
   do {
     // Shuffle flags in first iteration
-    if (countriesShuffled.length === 0) {
-      shuffleCountries();
+    if (dataShuffled.length === 0) {
+      shuffledata();
     }
 
-    /*Change from countriesCopy to CountriesShuffle to control if 
+    /*Change from dataCopy to dataShuffle to control if 
       the flags are sorted or shuffled*/
-    //currCountry = countriesShuffled.shift();
-    currCountry = countriesCopy.shift();
-  } while (!currCountry[2] || currCountry[1] != "Other Territories");
+    //currEntry = dataShuffled.shift();
+    currEntry = dataCopy.shift();
+  } while (!currEntry[2] || currEntry[1] != "Other Territories");
 
-  console.log("new flag found: " + currCountry[0]);
+  console.log("new flag found: " + currEntry[0]);
 
   // Create an image object
   var tempImage = new Image();
 
   // Set the source of the temporary image to the random flag image
-  tempImage.src = currCountry[2];
+  tempImage.src = currEntry[2];
 
   // When the temporary image is loaded, get its width and height
   tempImage.onload = function () {
@@ -98,7 +98,7 @@ function newFlag() {
 }
 
 function handleSearchSubmit(inputText) {
-  if (inputText.toUpperCase() === currCountry[0].toUpperCase()) {
+  if (inputText.toUpperCase() === currEntry[0].toUpperCase()) {
     // Answer found
     handleEndGame(true);
   } else {
@@ -120,13 +120,13 @@ function showRandomSection() {
   while (randomSection.style.backgroundImage) {
     randomSection = flagSections[Math.floor(Math.random() * 6)];
   }
-  randomSection.style.backgroundImage = 'url("' + currCountry[2] + '")';
+  randomSection.style.backgroundImage = 'url("' + currEntry[2] + '")';
 }
 
 function showAllSections() {
   var flagSections = document.querySelectorAll(".flag-row div");
   flagSections.forEach((section) => {
-    section.style.backgroundImage = 'url("' + currCountry[2] + '")';
+    section.style.backgroundImage = 'url("' + currEntry[2] + '")';
   });
 }
 
@@ -144,9 +144,9 @@ function handleEndGame(isWin) {
 
   var title = document.getElementById("body-title").querySelector("h2");
   if (isWin) {
-    title.textContent = "Correct! The answer is " + currCountry[0];
+    title.textContent = "Correct! The answer is " + currEntry[0];
   } else {
-    title.textContent = "Wrong... The answer is " + currCountry[0];
+    title.textContent = "Wrong... The answer is " + currEntry[0];
   }
 }
 
@@ -178,14 +178,14 @@ function autocomplete() {
     let items = 0;
 
     /*for each item in the array...*/
-    for (i = 0; i < countries.length && items < max_items; i++) {
+    for (i = 0; i < data.length && items < max_items; i++) {
       /*check if the item starts with the same letters as the text field value:*/
-      if (countries[i][0].toUpperCase().includes(val.toUpperCase())) {
+      if (data[i][0].toUpperCase().includes(val.toUpperCase())) {
         /*create a DIV element for each matching element:*/
         b = document.createElement("DIV");
-        b.innerHTML += countries[i][0];
+        b.innerHTML += data[i][0];
         /*insert a input field that will hold the current array item's value:*/
-        b.innerHTML += "<input type='hidden' value='" + countries[i][0] + "'>";
+        b.innerHTML += "<input type='hidden' value='" + data[i][0] + "'>";
         /*execute a function when someone clicks on the item value (DIV element):*/
         b.addEventListener("click", function (e) {
           /*insert the value for the autocomplete text field:*/
