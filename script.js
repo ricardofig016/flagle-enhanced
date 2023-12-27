@@ -5,10 +5,18 @@ var dataShuffled = [];
 var currEntry;
 var guesses = 0;
 
+var stats = {
+  curr_streak: 0,
+  highest_streak: 0,
+  results: [], // booleans
+  attempts: [], // integers
+};
+
 async function main() {
   await readData();
   newFlag();
   autocomplete();
+  updateStats();
 }
 
 async function readData() {
@@ -44,7 +52,7 @@ function shuffledata() {
 }
 
 function newFlag() {
-  console.log("finding new flag");
+  //console.log("finding new flag");
 
   // Change title
   document.getElementById("body-title").querySelector("h2").textContent =
@@ -68,7 +76,7 @@ function newFlag() {
     currEntry = dataCopy.shift();
   } while (!currEntry[2] || currEntry[1] != "Other Territories");
 
-  console.log("new flag found: " + currEntry[0]);
+  //console.log("new flag found: " + currEntry[0]);
 
   // Create an image object
   var tempImage = new Image();
@@ -94,7 +102,7 @@ function newFlag() {
     });
   };
 
-  console.log("new flag image loaded");
+  //console.log("new flag image loaded");
 }
 
 function handleSearchSubmit(inputText) {
@@ -140,14 +148,66 @@ function handleEndGame(isWin) {
   // Focus end-game button
 
   showAllSections();
-  guesses = 0;
 
   var title = document.getElementById("body-title").querySelector("h2");
   if (isWin) {
     title.textContent = "Correct! The answer is " + currEntry[0];
+    // Update stats
+    stats.curr_streak++;
+    if (stats.curr_streak > stats.highest_streak) {
+      stats.highest_streak++;
+    }
+    stats.results.push(true);
+    stats.attempts.push(guesses + 1);
   } else {
     title.textContent = "Wrong... The answer is " + currEntry[0];
+    // Update stats
+    stats.curr_streak = 0;
+    stats.results.push(false);
   }
+
+  console.log(stats);
+
+  guesses = 0;
+  updateStats();
+}
+
+function updateStats() {
+  function getWinRate(results) {
+    if (results.length === 0) {
+      return 0;
+    }
+
+    // Count the number of true values (won rounds)
+    const wonRounds = results.filter((result) => result === true).length;
+
+    // Return the win rate as a percentage
+    return (wonRounds / results.length) * 100;
+  }
+
+  function getAverageAttempts(attempts) {
+    if (attempts.length === 0) {
+      return 0;
+    }
+
+    // Calculate the sum of attempts
+    const sum = attempts.reduce((acc, current) => acc + current, 0);
+
+    // Return the average
+    return sum / attempts.length;
+  }
+
+  var statsContainer = document.getElementById("stats-container");
+
+  var statsContent = `
+    <h2>Statistics</h2>
+    <p>Current Streak: ${stats.curr_streak}</p>
+    <p>Highest Streak: ${stats.highest_streak}</p>
+    <p>Win Rate: ${getWinRate(stats.results)}%</p>
+    <p>Average Attempts: ${getAverageAttempts(stats.attempts)}</p>
+    `;
+
+  statsContainer.innerHTML = statsContent;
 }
 
 function autocomplete() {
