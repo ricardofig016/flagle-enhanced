@@ -6,11 +6,11 @@ var currEntry;
 var guesses = 0;
 var stats;
 
+var results = []; // booleans
+var attempts = []; // integers
 var stats = {
   curr_streak: 0,
   highest_streak: 0,
-  results: [], // booleans
-  attempts: [], // integers
 };
 
 async function main() {
@@ -20,8 +20,6 @@ async function main() {
     stats = {
       curr_streak: 0,
       highest_streak: 0,
-      results: [], // booleans
-      attempts: [], // integers
     };
     storeStats();
   }
@@ -178,13 +176,13 @@ function handleEndGame(isWin) {
     if (stats.curr_streak > stats.highest_streak) {
       stats.highest_streak++;
     }
-    stats.results.push(true);
-    stats.attempts.push(guesses + 1);
+    results.push(true);
+    attempts.push(guesses + 1);
   } else {
     title.textContent = "Wrong... The answer is " + currEntry[0];
     // Update stats
     stats.curr_streak = 0;
-    stats.results.push(false);
+    results.push(false);
   }
 
   console.log(stats);
@@ -227,12 +225,10 @@ function updateStats() {
   ).innerHTML = `<p>Highest Streak: ${stats.highest_streak}</p>`;
   document.getElementById(
     "stats-win-rate"
-  ).innerHTML = `<p>Win Rate: ${getWinRate(stats.results)}%</p>`;
+  ).innerHTML = `<p>Win Rate: ${getWinRate(results)}%</p>`;
   document.getElementById(
     "stats-avg-attempts"
-  ).innerHTML = `<p>Average Attempts: ${getAverageAttempts(
-    stats.attempts
-  )}</p>`;
+  ).innerHTML = `<p>Average Attempts: ${getAverageAttempts(attempts)}</p>`;
 }
 
 function autocomplete() {
@@ -292,32 +288,40 @@ function autocomplete() {
     addActive(x);
   }
 
-  /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function (e) {
-    var x = document.getElementById(inp.id + "autocomplete-list");
+  // Define your event listener function
+  function eventListenerFunction(e) {
+    var x = document.getElementById("searchautocomplete-list");
     if (x) x = x.getElementsByTagName("div");
     if (e.keyCode == 40) {
-      /*If the arrow DOWN key is pressed,
-          increase the currentFocus variable:*/
       currentFocus++;
-      /*and and make the current item more visible:*/
       addActive(x);
     } else if (e.keyCode == 38) {
-      //up
-      /*If the arrow UP key is pressed,
-          decrease the currentFocus variable:*/
       currentFocus--;
-      /*and and make the current item more visible:*/
       addActive(x);
     } else if (e.key === "Enter") {
-      /*and simulate a click on the "active" item:*/
       if (x && x.length !== 0) {
+        disableEventListener(200);
         x[currentFocus].click();
       } else {
         handleInputChange();
       }
     }
-  });
+  }
+
+  // Add the event listener
+  var inp = document.getElementById("search");
+  inp.addEventListener("keydown", eventListenerFunction);
+
+  // Function to disable the event listener for a certain duration
+  function disableEventListener(duration) {
+    // Remove the event listener
+    inp.removeEventListener("keydown", eventListenerFunction);
+
+    // Set a timeout to re-add the event listener after the specified duration
+    setTimeout(function () {
+      inp.addEventListener("keydown", eventListenerFunction);
+    }, duration);
+  }
 
   function addActive(x) {
     /*a function to classify an item as "active":*/
@@ -365,23 +369,10 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("end-game")
     .querySelector("button");
 
-  // Variable to store the timestamp of the last "Enter" key press
-  let lastEnterPressTime = 0;
-
   endGameButton.addEventListener("mousedown", newFlag);
   endGameButton.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
-      // Get the current timestamp
-      const currentTime = Date.now();
-
-      // Check if the elapsed time since the last "Enter" press is greater than 1 second
-      if (currentTime - lastEnterPressTime >= 1000) {
-        // Update the last "Enter" press timestamp
-        lastEnterPressTime = currentTime;
-
-        // Call the function only if the delay has passed
-        newFlag();
-      }
+      newFlag();
     }
   });
 });
