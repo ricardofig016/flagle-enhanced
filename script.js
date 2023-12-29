@@ -77,8 +77,6 @@ function retrieveStats() {
 }
 
 function newFlag() {
-  //console.log("finding new flag");
-
   // Change title
   document.getElementById("body-title").querySelector("h2").textContent =
     "Where is this flag from?";
@@ -367,10 +365,23 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("end-game")
     .querySelector("button");
 
+  // Variable to store the timestamp of the last "Enter" key press
+  let lastEnterPressTime = 0;
+
   endGameButton.addEventListener("mousedown", newFlag);
   endGameButton.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
-      newFlag();
+      // Get the current timestamp
+      const currentTime = Date.now();
+
+      // Check if the elapsed time since the last "Enter" press is greater than 1 second
+      if (currentTime - lastEnterPressTime >= 1000) {
+        // Update the last "Enter" press timestamp
+        lastEnterPressTime = currentTime;
+
+        // Call the function only if the delay has passed
+        newFlag();
+      }
     }
   });
 });
