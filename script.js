@@ -4,6 +4,7 @@ var dataShuffled = [];
 
 var currEntry;
 var guesses = 0;
+var stats;
 
 var stats = {
   curr_streak: 0,
@@ -14,6 +15,16 @@ var stats = {
 
 async function main() {
   await readData();
+  stats = retrieveStats();
+  if (!stats) {
+    stats = {
+      curr_streak: 0,
+      highest_streak: 0,
+      results: [], // booleans
+      attempts: [], // integers
+    };
+    storeStats();
+  }
   newFlag();
   autocomplete();
   updateStats();
@@ -51,6 +62,20 @@ function shuffledata() {
   dataShuffled.sort(() => Math.random() - 0.5);
 }
 
+function storeStats() {
+  // Stringify the object
+  const statsString = JSON.stringify(stats);
+
+  // Store the stringified object in localStorage
+  localStorage.setItem("userStats", statsString);
+}
+
+function retrieveStats() {
+  // Retrieve and parse the stringified object from localStorage
+  const storedStatsString = localStorage.getItem("userStats");
+  return JSON.parse(storedStatsString);
+}
+
 function newFlag() {
   //console.log("finding new flag");
 
@@ -72,9 +97,8 @@ function newFlag() {
 
     /*Change from dataCopy to dataShuffle to control if 
       the flags are sorted or shuffled*/
-    //currEntry = dataShuffled.shift();
-    currEntry = dataCopy.shift();
-  } while (!currEntry[2] || currEntry[1] != "Other Territories");
+    currEntry = dataShuffled.shift();
+  } while (!currEntry[2]); // || currEntry[1] != "Other Territories"
 
   //console.log("new flag found: " + currEntry[0]);
 
@@ -143,9 +167,8 @@ function handleEndGame(isWin) {
   var endGameDiv = document.getElementById("end-game");
   document.getElementById("search-container").style.display = "none";
   endGameDiv.style.display = "block";
-  endGameDiv.querySelector("button").focus();
-
   // Focus end-game button
+  endGameDiv.querySelector("button").focus();
 
   showAllSections();
 
@@ -169,6 +192,7 @@ function handleEndGame(isWin) {
   console.log(stats);
 
   guesses = 0;
+  storeStats();
   updateStats();
 }
 
@@ -182,7 +206,7 @@ function updateStats() {
     const wonRounds = results.filter((result) => result === true).length;
 
     // Return the win rate as a percentage
-    return (wonRounds / results.length) * 100;
+    return ((wonRounds / results.length) * 100).toFixed(2);
   }
 
   function getAverageAttempts(attempts) {
@@ -194,20 +218,23 @@ function updateStats() {
     const sum = attempts.reduce((acc, current) => acc + current, 0);
 
     // Return the average
-    return sum / attempts.length;
+    return (sum / attempts.length).toFixed(2);
   }
 
-  var statsContainer = document.getElementById("stats-container");
-
-  var statsContent = `
-    <h2>Statistics</h2>
-    <p>Current Streak: ${stats.curr_streak}</p>
-    <p>Highest Streak: ${stats.highest_streak}</p>
-    <p>Win Rate: ${getWinRate(stats.results)}%</p>
-    <p>Average Attempts: ${getAverageAttempts(stats.attempts)}</p>
-    `;
-
-  statsContainer.innerHTML = statsContent;
+  document.getElementById(
+    "stats-curr-streak"
+  ).innerHTML = `<p>Current Streak: ${stats.curr_streak}</p>`;
+  document.getElementById(
+    "stats-highest-streak"
+  ).innerHTML = `<p>Highest Streak: ${stats.highest_streak}</p>`;
+  document.getElementById(
+    "stats-win-rate"
+  ).innerHTML = `<p>Win Rate: ${getWinRate(stats.results)}%</p>`;
+  document.getElementById(
+    "stats-avg-attempts"
+  ).innerHTML = `<p>Average Attempts: ${getAverageAttempts(
+    stats.attempts
+  )}</p>`;
 }
 
 function autocomplete() {
