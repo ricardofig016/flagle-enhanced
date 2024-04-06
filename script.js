@@ -255,7 +255,7 @@ function autocomplete() {
     /*append the DIV element as a child of the autocomplete container:*/
     inp.parentNode.appendChild(a);
     /*limit number of items*/
-    const max_items = 6;
+    const max_items = 6; // 6 is a good maximum
     let items = 0;
 
     /*for each item in the array...*/
