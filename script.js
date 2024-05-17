@@ -2,6 +2,9 @@ var data = [];
 var dataCopy = [];
 var dataShuffled = [];
 
+var show_territories = false;
+var game_difficulty = "hard";
+
 var currEntry;
 var guesses = 0;
 var stats;
@@ -41,9 +44,10 @@ async function readData() {
     const entryName = columns[0].trim();
     const category = columns[1].trim();
     const flagPath = columns[2].trim();
+    const difficulty = columns[3].trim();
 
     // Add entry to data array
-    data.push([entryName, category, flagPath]);
+    data.push([entryName, category, flagPath, difficulty]);
   }
 
   // Store new data in copy array
@@ -55,7 +59,7 @@ async function readData() {
   //console.log(data);
 }
 
-function shuffledata() {
+function shuffleData() {
   dataShuffled = [...data];
   dataShuffled.sort(() => Math.random() - 0.5);
 }
@@ -85,18 +89,30 @@ function newFlag() {
   document.getElementById("search").focus();
 
   // Get random flag file
-  do {
-    // Shuffle flags in first iteration
-    if (dataShuffled.length === 0) {
-      shuffledata();
-    }
+  if (dataShuffled.length === 0) {
+    shuffleData();
+  }
 
+  var is_territory;
+  var entry_difficulty;
+  do {
     /*Change from dataCopy to dataShuffle to control if 
       the flags are sorted or shuffled*/
     currEntry = dataShuffled.shift();
-  } while (!currEntry[2]); // || currEntry[1] != "Other Territories"
 
-  //console.log("new flag found: " + currEntry[0]);
+    is_territory = currEntry[1] == "Other Territories";
+    entry_difficulty = currEntry[3];
+  } while (
+    (is_territory && !show_territories) ||
+    entry_difficulty != game_difficulty
+  );
+
+  console.log("new flag found: " + currEntry);
+  console.log("is territory: " + is_territory);
+  console.log("entry diff: " + entry_difficulty);
+  console.log(
+    "is_territory && !show_territories: " + (is_territory && !show_territories)
+  );
 
   // Create an image object
   var tempImage = new Image();
