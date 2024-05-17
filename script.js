@@ -2,8 +2,7 @@ var data = [];
 var dataCopy = [];
 var dataShuffled = [];
 
-var show_territories = false;
-var game_difficulty = "hard";
+var game_difficulty = 3; // 1 - easy , 2 - medium , 3 - hard
 
 var currEntry;
 var guesses = 0;
@@ -43,11 +42,11 @@ async function readData() {
     const columns = rows[i].split(",");
     const entryName = columns[0].trim();
     const category = columns[1].trim();
-    const flagPath = columns[2].trim();
-    const difficulty = columns[3].trim();
+    const difficulty = columns[2].trim();
+    const flagPath = columns[3].trim();
 
     // Add entry to data array
-    data.push([entryName, category, flagPath, difficulty]);
+    data.push([entryName, category, difficulty, flagPath]);
   }
 
   // Store new data in copy array
@@ -93,32 +92,28 @@ function newFlag() {
     shuffleData();
   }
 
-  var is_territory;
   var entry_difficulty;
   do {
     /*Change from dataCopy to dataShuffle to control if 
       the flags are sorted or shuffled*/
     currEntry = dataShuffled.shift();
 
-    is_territory = currEntry[1] == "Other Territories";
-    entry_difficulty = currEntry[3];
-  } while (
-    (is_territory && !show_territories) ||
-    entry_difficulty != game_difficulty
-  );
+    if (!currEntry) {
+      shuffleData();
+      currEntry = dataShuffled.shift();
+    }
+
+    entry_difficulty = currEntry[2];
+  } while (entry_difficulty > game_difficulty);
 
   console.log("new flag found: " + currEntry);
-  console.log("is territory: " + is_territory);
   console.log("entry diff: " + entry_difficulty);
-  console.log(
-    "is_territory && !show_territories: " + (is_territory && !show_territories)
-  );
 
   // Create an image object
   var tempImage = new Image();
 
   // Set the source of the temporary image to the random flag image
-  tempImage.src = currEntry[2];
+  tempImage.src = currEntry[3];
 
   // When the temporary image is loaded, get its width and height
   tempImage.onload = function () {
@@ -157,20 +152,19 @@ function handleSearchSubmit(inputText) {
 }
 
 function showRandomSection() {
-  // Show random section
   guesses++;
   var flagSections = document.querySelectorAll(".flag-row div");
   var randomSection = flagSections[Math.floor(Math.random() * 6)];
   while (randomSection.style.backgroundImage) {
     randomSection = flagSections[Math.floor(Math.random() * 6)];
   }
-  randomSection.style.backgroundImage = 'url("' + currEntry[2] + '")';
+  randomSection.style.backgroundImage = 'url("' + currEntry[3] + '")';
 }
 
 function showAllSections() {
   var flagSections = document.querySelectorAll(".flag-row div");
   flagSections.forEach((section) => {
-    section.style.backgroundImage = 'url("' + currEntry[2] + '")';
+    section.style.backgroundImage = 'url("' + currEntry[3] + '")';
   });
 }
 
@@ -206,6 +200,11 @@ function handleEndGame(isWin) {
   guesses = 0;
   storeStats();
   updateStats();
+
+  remove_end_game_button_event_listener();
+  setTimeout(() => {
+    add_end_game_button_event_listener();
+  }, 500);
 }
 
 function updateStats() {
@@ -379,16 +378,48 @@ function autocomplete() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Listeners for end-game button
+function add_end_game_button_event_listener() {
   var endGameButton = document
     .getElementById("end-game")
     .querySelector("button");
 
   endGameButton.addEventListener("mousedown", newFlag);
-  endGameButton.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      newFlag();
+  endGameButton.addEventListener("keydown", handle_end_game_button_keydown);
+}
+
+function remove_end_game_button_event_listener() {
+  var endGameButton = document
+    .getElementById("end-game")
+    .querySelector("button");
+
+  endGameButton.removeEventListener("mousedown", newFlag);
+  endGameButton.removeEventListener("keydown", handle_end_game_button_keydown);
+}
+
+function handle_end_game_button_keydown(e) {
+  if (e.key === "Enter") {
+    newFlag();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Listener for difficulty
+  var select = document.getElementById("difficulty-select");
+  select.addEventListener("change", function () {
+    switch (select.value) {
+      case "easy":
+        game_difficulty = 1;
+        break;
+      case "medium":
+        game_difficulty = 2;
+        break;
+      case "hard":
+        game_difficulty = 3;
+        break;
+      default:
+        game_difficulty = 3;
     }
   });
+
+  add_end_game_button_event_listener();
 });
